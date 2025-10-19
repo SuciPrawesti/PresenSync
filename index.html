@@ -13,7 +13,6 @@
             --space-darker: #0f0f23;
             --space-blue: #1e1b4b;
             --space-purple: #4c1d95;
-            --space-pink: #7e22ce;
             --blue-accent: #3b82f6;
             --purple-accent: #8b5cf6;
             --pink-accent: #c084fc;
@@ -26,7 +25,6 @@
             --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             --glow-blue: 0 0 20px rgba(59, 130, 246, 0.3);
             --glow-purple: 0 0 20px rgba(139, 92, 246, 0.3);
-            --glow-pink: 0 0 20px rgba(192, 132, 252, 0.3);
         }
 
         * {
@@ -54,45 +52,35 @@
             height: 100%;
             background: 
                 radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 40%),
-                radial-gradient(circle at 50% 50%, rgba(192, 132, 252, 0.05) 0%, transparent 50%);
+                radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 40%);
             z-index: -1;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
         }
 
         /* Hero Section */
         .hero {
-            padding: 20px 0 15px;
+            padding: 15px 0 10px;
             text-align: center;
             position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
-            z-index: -1;
         }
 
         .logo-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: -40px;
+            margin-bottom: -20px;
+            position: relative;
+            z-index: 2;
         }
 
         .logo {
-            width: 220px;
-            height: 220px;
+            width: 160px;
+            height: 160px;
             object-fit: contain;
             transition: all 0.3s ease;
         }
@@ -103,88 +91,72 @@
 
         .hero p {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.3rem;
+            font-size: 1rem;
             color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto 20px;
+            max-width: 600px;
+            margin: 0 auto 15px;
             font-weight: 400;
-            line-height: 1.6;
-            letter-spacing: -0.2px;
+            line-height: 1.5;
         }
 
         /* Main Content */
         .main-content {
             display: flex;
             flex-direction: column;
-            gap: 40px;
-            padding: 0 0 80px;
+            gap: 30px;
+            padding: 0 0 50px;
         }
 
         /* Form Section */
         .form-container {
             background: rgba(15, 15, 35, 0.7);
-            border-radius: 20px;
-            padding: 40px;
+            border-radius: 16px;
+            padding: 25px;
             border: 1px solid rgba(139, 92, 246, 0.2);
-            backdrop-filter: blur(15px);
-            box-shadow: var(--glow-purple), 0 20px 40px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--glow-purple), 0 15px 30px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
         }
 
-        .form-container::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
-            z-index: -1;
-        }
-
         .form-title {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             color: var(--white);
-            letter-spacing: -0.3px;
         }
 
         .form-subtitle {
             color: var(--gray);
-            margin-bottom: 32px;
-            font-size: 1rem;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
             font-family: 'Outfit', sans-serif;
-            letter-spacing: -0.1px;
         }
 
         .form-group {
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
         label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-weight: 500;
             color: var(--gray-light);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-family: 'Outfit', sans-serif;
-            letter-spacing: -0.1px;
         }
 
         input, textarea {
             width: 100%;
-            padding: 14px 16px;
-            border-radius: 12px;
+            padding: 12px 14px;
+            border-radius: 10px;
             border: 1px solid rgba(139, 92, 246, 0.2);
             background: rgba(10, 10, 30, 0.8);
             color: var(--white);
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 1rem;
+            font-size: 0.95rem;
             transition: all 0.3s ease;
-            letter-spacing: -0.1px;
         }
 
         input:focus, textarea:focus {
@@ -196,30 +168,29 @@
 
         textarea {
             resize: vertical;
-            min-height: 120px;
+            min-height: 100px;
         }
 
         .char-count {
             text-align: right;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--gray-dark);
             margin-top: 5px;
             font-family: 'Outfit', sans-serif;
-            letter-spacing: -0.1px;
         }
 
         .mood-selector {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-            margin-top: 10px;
+            gap: 10px;
+            margin-top: 8px;
         }
 
         .mood-option {
-            font-size: 2rem;
+            font-size: 1.6rem;
             cursor: pointer;
-            padding: 12px;
-            border-radius: 12px;
+            padding: 10px;
+            border-radius: 10px;
             transition: all 0.3s ease;
             background: rgba(10, 10, 30, 0.8);
             border: 1px solid rgba(139, 92, 246, 0.2);
@@ -230,27 +201,27 @@
             transform: scale(1.05);
             background: rgba(139, 92, 246, 0.2);
             border-color: var(--purple-accent);
-            box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+            box-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
         }
 
         .mood-option.selected {
             background: rgba(139, 92, 246, 0.3);
             border-color: var(--purple-accent);
-            box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+            box-shadow: 0 0 12px rgba(139, 92, 246, 0.5);
         }
 
         .submit-btn {
             background: linear-gradient(135deg, var(--blue-accent) 0%, var(--purple-accent) 50%, var(--pink-accent) 100%);
             color: white;
             border: none;
-            padding: 16px 32px;
-            border-radius: 12px;
-            font-size: 1.1rem;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.4s ease;
             width: 100%;
-            margin-top: 16px;
+            margin-top: 12px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -259,7 +230,6 @@
             overflow: hidden;
             z-index: 1;
             font-family: 'Poppins', sans-serif;
-            letter-spacing: -0.2px;
         }
 
         .submit-btn::before {
@@ -279,8 +249,8 @@
         }
 
         .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(139, 92, 246, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(139, 92, 246, 0.5);
         }
 
         .submit-btn:disabled {
@@ -292,83 +262,70 @@
         /* Messages Section */
         .messages-section {
             background: rgba(15, 15, 35, 0.6);
-            border-radius: 20px;
-            padding: 32px;
+            border-radius: 16px;
+            padding: 25px;
             border: 1px solid rgba(59, 130, 246, 0.2);
-            backdrop-filter: blur(15px);
-            box-shadow: var(--glow-blue), 0 20px 40px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--glow-blue), 0 15px 30px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
-            max-height: 600px;
+            max-height: 500px;
             display: flex;
             flex-direction: column;
-        }
-
-        .messages-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
-            z-index: -1;
         }
 
         .messages-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             flex-shrink: 0;
         }
 
         .messages-title {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 600;
             color: var(--white);
-            letter-spacing: -0.3px;
         }
 
         .messages-count {
             background: linear-gradient(135deg, var(--blue-accent) 0%, var(--purple-accent) 100%);
             color: white;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
+            padding: 5px 12px;
+            border-radius: 16px;
+            font-size: 0.8rem;
             font-weight: 500;
             font-family: 'Outfit', sans-serif;
-            letter-spacing: -0.1px;
         }
 
         .messages-list {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
             overflow-y: auto;
             padding-right: 8px;
             flex-grow: 1;
         }
 
         .messages-list::-webkit-scrollbar {
-            width: 8px;
+            width: 6px;
         }
 
         .messages-list::-webkit-scrollbar-track {
             background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
+            border-radius: 8px;
         }
 
         .messages-list::-webkit-scrollbar-thumb {
             background: linear-gradient(135deg, var(--blue-accent) 0%, var(--purple-accent) 100%);
-            border-radius: 10px;
+            border-radius: 8px;
         }
 
         .message-card {
             background: rgba(10, 10, 30, 0.7);
-            border-radius: 16px;
-            padding: 20px;
+            border-radius: 12px;
+            padding: 16px;
             border: 1px solid rgba(192, 132, 252, 0.1);
             transition: all 0.3s ease;
             position: relative;
@@ -394,15 +351,15 @@
 
         .message-card:hover {
             border-color: rgba(192, 132, 252, 0.3);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
         }
 
         .message-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .message-info {
@@ -412,45 +369,41 @@
         .message-name {
             font-family: 'Outfit', sans-serif;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--white);
             margin-bottom: 4px;
-            letter-spacing: -0.1px;
         }
 
         .message-school {
             color: var(--pink-light);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            letter-spacing: -0.1px;
         }
 
         .message-mood {
-            font-size: 1.8rem;
-            margin-left: 12px;
+            font-size: 1.5rem;
+            margin-left: 10px;
             filter: drop-shadow(0 0 5px rgba(192, 132, 252, 0.5));
         }
 
         .message-text {
             color: var(--gray);
-            font-size: 0.95rem;
-            line-height: 1.6;
+            font-size: 0.9rem;
+            line-height: 1.5;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            letter-spacing: -0.1px;
         }
 
         .message-time {
             color: var(--gray-dark);
-            font-size: 0.8rem;
-            margin-top: 8px;
+            font-size: 0.75rem;
+            margin-top: 6px;
             text-align: right;
             font-family: 'Outfit', sans-serif;
-            letter-spacing: -0.1px;
         }
 
         .empty-state {
             text-align: center;
-            padding: 60px 20px;
+            padding: 40px 15px;
             color: var(--gray);
             flex-grow: 1;
             display: flex;
@@ -460,8 +413,8 @@
         }
 
         .empty-state .icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
+            font-size: 3rem;
+            margin-bottom: 15px;
             opacity: 0.5;
         }
 
@@ -477,74 +430,60 @@
             z-index: 1000;
             justify-content: center;
             align-items: center;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(8px);
         }
 
         .modal-content {
             background: rgba(15, 15, 35, 0.95);
-            border-radius: 20px;
-            padding: 40px;
+            border-radius: 16px;
+            padding: 30px;
             text-align: center;
-            max-width: 500px;
+            max-width: 450px;
             width: 90%;
             border: 1px solid rgba(139, 92, 246, 0.3);
-            box-shadow: 0 0 30px rgba(139, 92, 246, 0.5), 0 25px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.5), 0 20px 40px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
         }
 
-        .modal-content::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
-            z-index: -1;
-        }
-
         .modal-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.5));
+            font-size: 3rem;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.5));
         }
 
         .modal-title {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.8rem;
-            margin-bottom: 16px;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
             font-weight: 600;
             color: var(--white);
-            letter-spacing: -0.3px;
         }
 
         .modal-message {
             color: var(--gray);
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-            line-height: 1.6;
+            margin-bottom: 25px;
+            font-size: 1rem;
+            line-height: 1.5;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            letter-spacing: -0.1px;
         }
 
         .modal-close {
             background: linear-gradient(135deg, var(--blue-accent) 0%, var(--purple-accent) 100%);
             color: white;
             border: none;
-            padding: 12px 24px;
-            border-radius: 10px;
-            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.95rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
             font-family: 'Outfit', sans-serif;
-            letter-spacing: -0.1px;
         }
 
         .modal-close:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+            box-shadow: 0 6px 15px rgba(139, 92, 246, 0.4);
         }
 
         /* Confetti */
@@ -561,7 +500,7 @@
 
         /* Footer */
         footer {
-            padding: 40px 0;
+            padding: 30px 0;
             border-top: 1px solid rgba(139, 92, 246, 0.2);
             background: rgb(10 10 30 / 45%);
             text-align: center;
@@ -580,9 +519,8 @@
 
         .footer-text {
             color: var(--gray);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-family: 'Outfit', sans-serif;
-            letter-spacing: -0.1px;
         }
 
         /* Particle Background */
@@ -651,27 +589,28 @@
         /* Tabs */
         .tabs {
             display: flex;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             background: rgba(10, 10, 30, 0.5);
-            border-radius: 12px;
+            border-radius: 10px;
             padding: 4px;
             border: 1px solid rgba(139, 92, 246, 0.2);
         }
 
         .tab {
             flex: 1;
-            padding: 12px 16px;
+            padding: 10px 14px;
             text-align: center;
             cursor: pointer;
-            border-radius: 8px;
+            border-radius: 6px;
             transition: all 0.3s ease;
             font-weight: 500;
             font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
         }
 
         .tab.active {
             background: linear-gradient(135deg, var(--blue-accent) 0%, var(--purple-accent) 100%);
-            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+            box-shadow: 0 3px 10px rgba(139, 92, 246, 0.3);
         }
 
         .tab-content {
@@ -682,129 +621,11 @@
             display: block;
         }
 
-        /* Responsif */
-        @media (min-width: 1200px) {
-            .logo {
-                width: 250px;
-                height: 250px;
-            }
-            
-            .logo-container {
-                margin-bottom: -45px;
-            }
-            
-            .hero p {
-                font-size: 1.4rem;
-            }
-        }
-
-        @media (min-width: 968px) {
-            .main-content {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-        }
-
-        @media (max-width: 968px) {
-            .main-content {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                padding: 15px 0 10px;
-            }
-            
-            .logo {
-                width: 200px;
-                height: 200px;
-            }
-            
-            .logo-container {
-                margin-bottom: -35px;
-            }
-            
-            .hero p {
-                font-size: 1.2rem;
-                margin-bottom: 15px;
-            }
-
-            .form-container {
-                padding: 30px 24px;
-            }
-
-            .messages-section {
-                padding: 24px 20px;
-                max-height: 500px;
-            }
-
-            .mood-selector {
-                grid-template-columns: repeat(4, 1fr);
-            }
-
-            .mood-option {
-                font-size: 1.6rem;
-                padding: 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero {
-                padding: 10px 0 5px;
-            }
-            
-            .logo {
-                width: 180px;
-                height: 180px;
-            }
-            
-            .logo-container {
-                margin-bottom: -30px;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-                margin-bottom: 15px;
-            }
-            
-            .mood-selector {
-                grid-template-columns: repeat(4, 1fr);
-            }
-
-            .mood-option {
-                font-size: 1.4rem;
-                padding: 8px;
-            }
-            
-            .messages-section {
-                max-height: 400px;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .logo {
-                width: 160px;
-                height: 160px;
-            }
-            
-            .logo-container {
-                margin-bottom: -25px;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-                margin-bottom: 15px;
-            }
-        }
-
         /* Animasi */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
@@ -813,7 +634,7 @@
         }
 
         .fade-in-up {
-            animation: fadeInUp 0.6s ease forwards;
+            animation: fadeInUp 0.5s ease forwards;
         }
 
         .pulse {
@@ -825,10 +646,142 @@
                 box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4);
             }
             70% {
-                box-shadow: 0 0 0 10px rgba(139, 92, 246, 0);
+                box-shadow: 0 0 0 8px rgba(139, 92, 246, 0);
             }
             100% {
                 box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+            }
+        }
+
+        /* Responsif */
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .logo {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .logo-container {
+                margin-bottom: -25px;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .form-container {
+                padding: 30px;
+            }
+            
+            .messages-section {
+                padding: 30px;
+            }
+            
+            .mood-selector {
+                grid-template-columns: repeat(8, 1fr);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .main-content {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .logo {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .logo-container {
+                margin-bottom: -30px;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 10px 0 5px;
+            }
+            
+            .logo {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .logo-container {
+                margin-bottom: -15px;
+            }
+            
+            .hero p {
+                font-size: 0.95rem;
+                margin-bottom: 10px;
+            }
+            
+            .form-container, .messages-section {
+                padding: 20px;
+            }
+            
+            .form-title {
+                font-size: 1.3rem;
+            }
+            
+            .messages-title {
+                font-size: 1.2rem;
+            }
+            
+            .mood-selector {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .mood-option {
+                font-size: 1.4rem;
+                padding: 8px;
+            }
+            
+            .messages-section {
+                max-height: 400px;
+            }
+            
+            .tab {
+                padding: 8px 10px;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .logo-container {
+                margin-bottom: -10px;
+            }
+            
+            .hero p {
+                font-size: 0.9rem;
+            }
+            
+            .form-container, .messages-section {
+                padding: 15px;
+            }
+            
+            .mood-selector {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 8px;
+            }
+            
+            .mood-option {
+                font-size: 1.2rem;
+                padding: 6px;
             }
         }
     </style>
@@ -926,7 +879,7 @@
                     <div class="empty-state">
                         <div class="icon">💫</div>
                         <p>Belum ada pesan</p>
-                        <p style="font-size: 0.9rem; margin-top: 8px;">Jadilah yang pertama meninggalkan pesan!</p>
+                        <p style="font-size: 0.85rem; margin-top: 6px;">Jadilah yang pertama meninggalkan pesan!</p>
                     </div>
                 </div>
             </section>
@@ -954,7 +907,7 @@
         // Inisialisasi particle background
         function initParticles() {
             const particlesContainer = document.getElementById('particles');
-            const particleCount = 60;
+            const particleCount = 40;
             
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
@@ -972,7 +925,7 @@
                 }
                 
                 // Ukuran acak
-                const size = Math.random() * 3 + 1;
+                const size = Math.random() * 2 + 1;
                 particle.style.width = `${size}px`;
                 particle.style.height = `${size}px`;
                 
@@ -1060,7 +1013,7 @@
             canvas.style.display = 'block';
             
             const confettiPieces = [];
-            const confettiCount = 150;
+            const confettiCount = 100;
             const colors = ['#3b82f6', '#8b5cf6', '#c084fc', '#6366f1', '#a855f7'];
             
             // Buat potongan confetti
@@ -1068,7 +1021,7 @@
                 confettiPieces.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height - canvas.height,
-                    size: Math.random() * 8 + 4,
+                    size: Math.random() * 6 + 3,
                     color: colors[Math.floor(Math.random() * colors.length)],
                     speed: Math.random() * 3 + 2,
                     rotation: Math.random() * 360,
@@ -1103,7 +1056,7 @@
                 } else {
                     setTimeout(() => {
                         canvas.style.display = 'none';
-                    }, 1500);
+                    }, 1000);
                 }
             }
             
@@ -1154,7 +1107,7 @@
             updateMessageCount();
             
             // Batasi jumlah pesan di feed
-            if (messagesList.children.length > 20) {
+            if (messagesList.children.length > 15) {
                 messagesList.removeChild(messagesList.lastChild);
             }
         }
@@ -1212,7 +1165,7 @@
                 
                 try {
                     // Simulasi pengiriman data
-                    await new Promise(resolve => setTimeout(resolve, 1200));
+                    await new Promise(resolve => setTimeout(resolve, 1000));
                     
                     // Simpan data absensi
                     const attendanceData = {
@@ -1288,24 +1241,6 @@
                     school: "SMK Teknologi Indonesia",
                     message: "Senang bisa hadir di pameran ini. Banyak ide yang bisa saya terapkan untuk projek sekolah tahun depan.",
                     mood: "👍"
-                },
-                {
-                    name: "Dewi Lestari",
-                    school: "SMA Plus PGRI Cibinong",
-                    message: "UI/UX design yang ditampilkan sangat memukau. Terima kasih atas inspirasinya!",
-                    mood: "❤️"
-                },
-                {
-                    name: "Rizky Pratama",
-                    school: "SMK TI Pembangunan",
-                    message: "Inovasi yang ditampilkan sangat futuristik. Sangat menginspirasi untuk terus belajar teknologi.",
-                    mood: "🌟"
-                },
-                {
-                    name: "Maya Sari",
-                    school: "SMA Negeri 8 Surabaya",
-                    message: "Presentasinya sangat menarik dan mudah dipahami. Good job untuk semua peserta!",
-                    mood: "🎉"
                 }
             ];
             
