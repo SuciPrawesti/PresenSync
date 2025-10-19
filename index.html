@@ -68,7 +68,7 @@
 
         /* Hero Section */
         .hero {
-            padding: 15px 0 10px;
+            padding: 15px 0 15px; /* Tambah padding bottom */
             text-align: center;
             position: relative;
         }
@@ -88,7 +88,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: -35px;
+            margin-bottom: -35px; /* Tetap minus */
             position: relative;
             z-index: 2;
         }
@@ -109,7 +109,7 @@
             font-size: 1.1rem;
             color: var(--gray);
             max-width: 650px;
-            margin: 0 auto 15px;
+            margin: 0 auto 25px; /* Tambah margin bottom */
             font-weight: 400;
             line-height: 1.5;
             letter-spacing: -0.2px;
@@ -701,6 +701,7 @@
             
             .hero p {
                 font-size: 1.2rem;
+                margin-bottom: 30px;
             }
         }
 
@@ -721,7 +722,7 @@
 
         @media (max-width: 768px) {
             .hero {
-                padding: 10px 0 5px;
+                padding: 10px 0 15px;
             }
             
             .logo {
@@ -735,7 +736,7 @@
             
             .hero p {
                 font-size: 1rem;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
             }
 
             .form-container {
@@ -759,7 +760,7 @@
 
         @media (max-width: 480px) {
             .hero {
-                padding: 8px 0 3px;
+                padding: 8px 0 15px;
             }
             
             .logo {
@@ -773,7 +774,7 @@
             
             .hero p {
                 font-size: 0.95rem;
-                margin-bottom: 8px;
+                margin-bottom: 20px;
             }
             
             .mood-selector {
@@ -799,6 +800,10 @@
         }
 
         @media (max-width: 360px) {
+            .hero {
+                padding: 8px 0 15px;
+            }
+            
             .logo {
                 width: 160px;
                 height: 160px;
@@ -810,7 +815,7 @@
             
             .hero p {
                 font-size: 0.9rem;
-                margin-bottom: 8px;
+                margin-bottom: 20px;
             }
             
             .mood-selector {
@@ -868,7 +873,7 @@
     <section class="hero">
         <div class="container">
             <div class="logo-container fade-in-up">
-                <img src="assets/PresenSync_logo3.png" alt="PresenSync Logo" class="logo">
+                <img src="assets/PresenSync_logo4.png" alt="PresenSync Logo" class="logo">
             </div>
             <p class="fade-in-up">Buku tamu dan absensi digital untuk SkanegaFest Gim & Apps. Tuliskan pesan dan kesan Anda!</p>
         </div>
