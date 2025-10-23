@@ -8,6 +8,50 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+
+@font-face {
+    font-family: 'BatikBlend';
+    src: url('assets/fonts/BatikBlend.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gethuk Jawa';
+    src: url('assets/fonts/Gethuk Jawa.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AksaraSastrajendra';
+    src: url('assets/fonts/AksaraSastrajendra.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JavaCalligraphy';
+    src: url('assets/fonts/JavaCalligraphy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'jawanie';
+    src: url('assets/fonts/jawanie.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Javassoul';
+    src: url('assets/fonts/Javassoul.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
         :root {
             --space-dark: #0a0a1a;
             --space-darker: #0f0f23;
@@ -68,7 +112,7 @@
 
         /* Hero Section */
         .hero {
-            padding: 15px 0 15px; /* Tambah padding bottom */
+            padding: 20px 0 15px; /* Tambah padding top untuk memberi jarak lebih */
             text-align: center;
             position: relative;
         }
@@ -88,20 +132,30 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: -35px; /* Tetap minus */
+            margin-bottom: 15px; /* Ubah dari minus ke positif untuk memberi jarak */
             position: relative;
             z-index: 2;
         }
 
-        .logo {
-            width: 220px;
-            height: 220px;
-            object-fit: contain;
+        .logo-text {
+            font-family: 'BatikBlend', sans-serif;
+            font-size: 3.5rem;
+            color: var(--white);
+            text-shadow: 
+                0 0 10px rgba(255, 255, 255, 0.7),
+                0 0 20px rgba(192, 132, 252, 0.5),
+                0 0 30px rgba(139, 92, 246, 0.3);
             transition: all 0.3s ease;
+            letter-spacing: 1px;
+            margin-top: 10px; /* Tambah margin top untuk jarak tambahan */
         }
 
-        .logo:hover {
+        .logo-text:hover {
             transform: scale(1.05);
+            text-shadow: 
+                0 0 15px rgba(255, 255, 255, 0.8),
+                0 0 25px rgba(192, 132, 252, 0.6),
+                0 0 35px rgba(139, 92, 246, 0.4);
         }
 
         .hero p {
@@ -115,6 +169,7 @@
             letter-spacing: -0.2px;
             position: relative;
             z-index: 1;
+            margin-top: 20px; /* Tambah margin top untuk jarak dari logo */
         }
 
         /* Main Content */
@@ -690,18 +745,18 @@
 
         /* Responsif */
         @media (min-width: 1200px) {
-            .logo {
-                width: 250px;
-                height: 250px;
+            .logo-text {
+                font-size: 4rem;
             }
             
             .logo-container {
-                margin-bottom: -45px;
+                margin-bottom: 20px; /* Sesuaikan untuk desktop */
             }
             
             .hero p {
                 font-size: 1.2rem;
                 margin-bottom: 30px;
+                margin-top: 25px; /* Sesuaikan untuk desktop */
             }
         }
 
@@ -722,21 +777,21 @@
 
         @media (max-width: 768px) {
             .hero {
-                padding: 10px 0 15px;
+                padding: 15px 0 15px; /* Sesuaikan padding untuk tablet */
             }
             
-            .logo {
-                width: 200px;
-                height: 200px;
+            .logo-text {
+                font-size: 3rem;
             }
             
             .logo-container {
-                margin-bottom: -30px;
+                margin-bottom: 15px; /* Sesuaikan untuk tablet */
             }
             
             .hero p {
                 font-size: 1rem;
                 margin-bottom: 20px;
+                margin-top: 15px; /* Sesuaikan untuk tablet */
             }
 
             .form-container {
@@ -760,21 +815,21 @@
 
         @media (max-width: 480px) {
             .hero {
-                padding: 8px 0 15px;
+                padding: 10px 0 15px; /* Sesuaikan padding untuk mobile */
             }
             
-            .logo {
-                width: 180px;
-                height: 180px;
+            .logo-text {
+                font-size: 2.5rem;
             }
             
             .logo-container {
-                margin-bottom: -25px;
+                margin-bottom: 12px; /* Sesuaikan untuk mobile */
             }
             
             .hero p {
                 font-size: 0.95rem;
                 margin-bottom: 20px;
+                margin-top: 12px; /* Sesuaikan untuk mobile */
             }
             
             .mood-selector {
@@ -801,21 +856,21 @@
 
         @media (max-width: 360px) {
             .hero {
-                padding: 8px 0 15px;
+                padding: 8px 0 15px; /* Sesuaikan padding untuk mobile kecil */
             }
             
-            .logo {
-                width: 160px;
-                height: 160px;
+            .logo-text {
+                font-size: 2rem;
             }
             
             .logo-container {
-                margin-bottom: -20px;
+                margin-bottom: 10px; /* Sesuaikan untuk mobile kecil */
             }
             
             .hero p {
                 font-size: 0.9rem;
                 margin-bottom: 20px;
+                margin-top: 10px; /* Sesuaikan untuk mobile kecil */
             }
             
             .mood-selector {
@@ -873,7 +928,7 @@
     <section class="hero">
         <div class="container">
             <div class="logo-container fade-in-up">
-                <img src="assets/PresenSync_logo.png" alt="PresenSync Logo" class="logo">
+                <h2 class="logo-text">PresenSync</h2>
             </div>
             <p class="fade-in-up">Buku tamu dan absensi digital untuk SkanegaFest Gim & Apps. Tuliskan pesan dan kesan Anda!</p>
         </div>
@@ -1358,4 +1413,3 @@
     </script>
 </body>
 </html>
-
