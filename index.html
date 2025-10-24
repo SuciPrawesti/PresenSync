@@ -8,49 +8,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        @font-face {
+            font-family: 'Upakarti Serong';
+            src: url('assets/fonts/Upakarti Serong.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-@font-face {
-    font-family: 'Upakarti Serong';
-    src: url('assets/fonts/Upakarti Serong.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+        @font-face {
+            font-family: 'Gethuk Jawa';
+            src: url('assets/fonts/Gethuk Jawa.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-@font-face {
-    font-family: 'Gethuk Jawa';
-    src: url('assets/fonts/Gethuk Jawa.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
+        @font-face {
+            font-family: 'AksaraSastrajendra';
+            src: url('assets/fonts/AksaraSastrajendra.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-@font-face {
-    font-family: 'AksaraSastrajendra';
-    src: url('assets/fonts/AksaraSastrajendra.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
+        @font-face {
+            font-family: 'JavaCalligraphy';
+            src: url('assets/fonts/JavaCalligraphy.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-@font-face {
-    font-family: 'JavaCalligraphy';
-    src: url('assets/fonts/JavaCalligraphy.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+        @font-face {
+            font-family: 'jawanie';
+            src: url('assets/fonts/jawanie.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-@font-face {
-    font-family: 'jawanie';
-    src: url('assets/fonts/jawanie.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Javassoul';
-    src: url('assets/fonts/Javassoul.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
+        @font-face {
+            font-family: 'JunigardenSwash_PERSONAL_USE_ONLY';
+            src: url('assets/fonts/JunigardenSwash_PERSONAL_USE_ONLY.otf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
 
         :root {
             --space-dark: #0a0a1a;
@@ -110,9 +108,9 @@
             padding: 0 15px;
         }
 
-        /* Hero Section */
+        /* Hero Section - PERBAIKAN UTAMA */
         .hero {
-            padding: 20px 0 15px; /* Tambah padding top untuk memberi jarak lebih */
+            padding: 20px 0 15px;
             text-align: center;
             position: relative;
         }
@@ -132,14 +130,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 15px; /* Ubah dari minus ke positif untuk memberi jarak */
+            margin-bottom: 15px;
             position: relative;
             z-index: 2;
         }
 
+        /* JUDUL PRESENSYNC - UKURAN DIPERKECIL */
         .logo-text {
-            font-family: 'JavaCalligraphy', sans-serif;
-            font-size: 3.5rem;
+            font-family: 'JunigardenSwash_PERSONAL_USE_ONLY', sans-serif;
             color: var(--white);
             text-shadow: 
                 0 0 10px rgba(255, 255, 255, 0.7),
@@ -147,7 +145,10 @@
                 0 0 30px rgba(139, 92, 246, 0.3);
             transition: all 0.3s ease;
             letter-spacing: 1px;
-            margin-top: 10px; /* Tambah margin top untuk jarak tambahan */
+            margin-top: 10px;
+            
+            /* Ukuran font yang lebih kecil dan responsif */
+            font-size: clamp(1.8rem, 6vw, 2.8rem);
         }
 
         .logo-text:hover {
@@ -160,16 +161,18 @@
 
         .hero p {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.1rem;
             color: var(--gray);
             max-width: 650px;
-            margin: 0 auto 25px; /* Tambah margin bottom */
+            margin: 0 auto 25px;
             font-weight: 400;
             line-height: 1.5;
             letter-spacing: -0.2px;
             position: relative;
             z-index: 1;
-            margin-top: 20px; /* Tambah margin top untuk jarak dari logo */
+            margin-top: 15px;
+            
+            /* Ukuran font yang lebih kecil untuk paragraf */
+            font-size: clamp(0.85rem, 2.2vw, 1rem);
         }
 
         /* Main Content */
@@ -184,7 +187,7 @@
         .form-container {
             background: rgba(15, 15, 35, 0.7);
             border-radius: 16px;
-            padding: 30px;
+            padding: 25px;
             border: 1px solid rgba(139, 92, 246, 0.2);
             backdrop-filter: blur(15px);
             box-shadow: var(--glow-purple), 0 15px 30px rgba(0, 0, 0, 0.3);
@@ -205,7 +208,7 @@
 
         .form-title {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 6px;
             color: var(--white);
@@ -214,14 +217,14 @@
 
         .form-subtitle {
             color: var(--gray);
-            margin-bottom: 24px;
-            font-size: 0.9rem;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
             font-family: 'Outfit', sans-serif;
             letter-spacing: -0.1px;
         }
 
         .form-group {
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         label {
@@ -229,20 +232,20 @@
             margin-bottom: 6px;
             font-weight: 500;
             color: var(--gray-light);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-family: 'Outfit', sans-serif;
             letter-spacing: -0.1px;
         }
 
         input, textarea {
             width: 100%;
-            padding: 12px 14px;
+            padding: 10px 12px;
             border-radius: 10px;
             border: 1px solid rgba(139, 92, 246, 0.2);
             background: rgba(10, 10, 30, 0.8);
             color: var(--white);
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: all 0.3s ease;
             letter-spacing: -0.1px;
         }
@@ -256,12 +259,12 @@
 
         textarea {
             resize: vertical;
-            min-height: 100px;
+            min-height: 90px;
         }
 
         .char-count {
             text-align: right;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: var(--gray-dark);
             margin-top: 5px;
             font-family: 'Outfit', sans-serif;
@@ -271,14 +274,14 @@
         .mood-selector {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
+            gap: 8px;
             margin-top: 8px;
         }
 
         .mood-option {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             cursor: pointer;
-            padding: 10px;
+            padding: 8px;
             border-radius: 10px;
             transition: all 0.3s ease;
             background: rgba(10, 10, 30, 0.8);
@@ -303,14 +306,14 @@
             background: linear-gradient(135deg, var(--blue-accent) 0%, var(--purple-accent) 50%, var(--pink-accent) 100%);
             color: white;
             border: none;
-            padding: 14px 28px;
+            padding: 12px 24px;
             border-radius: 10px;
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.4s ease;
             width: 100%;
-            margin-top: 12px;
+            margin-top: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -353,13 +356,13 @@
         .messages-section {
             background: rgba(15, 15, 35, 0.6);
             border-radius: 16px;
-            padding: 24px;
+            padding: 20px;
             border: 1px solid rgba(59, 130, 246, 0.2);
             backdrop-filter: blur(15px);
             box-shadow: var(--glow-blue), 0 15px 30px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
-            max-height: 500px;
+            max-height: 450px;
             display: flex;
             flex-direction: column;
         }
@@ -379,13 +382,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
             flex-shrink: 0;
         }
 
         .messages-title {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 600;
             color: var(--white);
             letter-spacing: -0.3px;
@@ -394,9 +397,9 @@
         .messages-count {
             background: linear-gradient(135deg, var(--blue-accent) 0%, var(--purple-accent) 100%);
             color: white;
-            padding: 5px 12px;
+            padding: 4px 10px;
             border-radius: 16px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 500;
             font-family: 'Outfit', sans-serif;
             letter-spacing: -0.1px;
@@ -405,7 +408,7 @@
         .messages-list {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 14px;
             overflow-y: auto;
             padding-right: 6px;
             flex-grow: 1;
@@ -428,7 +431,7 @@
         .message-card {
             background: rgba(10, 10, 30, 0.7);
             border-radius: 12px;
-            padding: 16px;
+            padding: 14px;
             border: 1px solid rgba(192, 132, 252, 0.1);
             transition: all 0.3s ease;
             position: relative;
@@ -462,7 +465,7 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .message-info {
@@ -472,7 +475,7 @@
         .message-name {
             font-family: 'Outfit', sans-serif;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: var(--white);
             margin-bottom: 3px;
             letter-spacing: -0.1px;
@@ -480,20 +483,20 @@
 
         .message-school {
             color: var(--pink-light);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-family: 'Plus Jakarta Sans', sans-serif;
             letter-spacing: -0.1px;
         }
 
         .message-mood {
-            font-size: 1.5rem;
-            margin-left: 10px;
+            font-size: 1.3rem;
+            margin-left: 8px;
             filter: drop-shadow(0 0 4px rgba(192, 132, 252, 0.5));
         }
 
         .message-text {
             color: var(--gray);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             line-height: 1.5;
             font-family: 'Plus Jakarta Sans', sans-serif;
             letter-spacing: -0.1px;
@@ -501,7 +504,7 @@
 
         .message-time {
             color: var(--gray-dark);
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             margin-top: 6px;
             text-align: right;
             font-family: 'Outfit', sans-serif;
@@ -510,7 +513,7 @@
 
         .empty-state {
             text-align: center;
-            padding: 50px 15px;
+            padding: 40px 15px;
             color: var(--gray);
             flex-grow: 1;
             display: flex;
@@ -520,8 +523,8 @@
         }
 
         .empty-state .icon {
-            font-size: 3.5rem;
-            margin-bottom: 15px;
+            font-size: 3rem;
+            margin-bottom: 12px;
             opacity: 0.5;
         }
 
@@ -543,9 +546,9 @@
         .modal-content {
             background: rgba(15, 15, 35, 0.95);
             border-radius: 16px;
-            padding: 30px;
+            padding: 25px;
             text-align: center;
-            max-width: 450px;
+            max-width: 400px;
             width: 90%;
             border: 1px solid rgba(139, 92, 246, 0.3);
             box-shadow: 0 0 25px rgba(139, 92, 246, 0.5), 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -565,15 +568,15 @@
         }
 
         .modal-icon {
-            font-size: 3.5rem;
-            margin-bottom: 15px;
+            font-size: 3rem;
+            margin-bottom: 12px;
             filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.5));
         }
 
         .modal-title {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
-            margin-bottom: 12px;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
             font-weight: 600;
             color: var(--white);
             letter-spacing: -0.3px;
@@ -581,8 +584,8 @@
 
         .modal-message {
             color: var(--gray);
-            margin-bottom: 25px;
-            font-size: 1rem;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
             line-height: 1.5;
             font-family: 'Plus Jakarta Sans', sans-serif;
             letter-spacing: -0.1px;
@@ -592,9 +595,9 @@
             background: linear-gradient(135deg, var(--blue-accent) 0%, var(--purple-accent) 100%);
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 8px 18px;
             border-radius: 8px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -621,7 +624,7 @@
 
         /* Footer */
         footer {
-            padding: 30px 0;
+            padding: 25px 0;
             border-top: 1px solid rgba(139, 92, 246, 0.2);
             background: rgb(10 10 30 / 45%);
             text-align: center;
@@ -640,7 +643,7 @@
 
         .footer-text {
             color: var(--gray);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-family: 'Outfit', sans-serif;
             letter-spacing: -0.1px;
         }
@@ -711,7 +714,7 @@
         /* Tabs */
         .tabs {
             display: flex;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
             background: rgba(10, 10, 30, 0.5);
             border-radius: 10px;
             padding: 3px;
@@ -720,13 +723,13 @@
 
         .tab {
             flex: 1;
-            padding: 10px 14px;
+            padding: 8px 12px;
             text-align: center;
             cursor: pointer;
             border-radius: 6px;
             transition: all 0.3s ease;
             font-weight: 500;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-family: 'Outfit', sans-serif;
         }
 
@@ -743,23 +746,45 @@
             display: block;
         }
 
-        /* Responsif */
-        @media (min-width: 1200px) {
+        /* Responsif - PERBAIKAN UTAMA */
+        /* Untuk layar sangat kecil (di bawah 360px) */
+        @media (max-width: 359px) {
             .logo-text {
-                font-size: 4rem;
-            }
-            
-            .logo-container {
-                margin-bottom: 20px; /* Sesuaikan untuk desktop */
+                font-size: 1.6rem;
             }
             
             .hero p {
-                font-size: 1.2rem;
-                margin-bottom: 30px;
-                margin-top: 25px; /* Sesuaikan untuk desktop */
+                font-size: 0.8rem;
+            }
+            
+            .form-container {
+                padding: 20px 15px;
+            }
+            
+            .messages-section {
+                padding: 18px 15px;
+            }
+        }
+        
+        /* Untuk tablet dan layar sedang (768px ke atas) */
+        @media (min-width: 768px) {
+            .logo-text {
+                font-size: clamp(2.2rem, 5vw, 2.5rem);
+            }
+            
+            .hero p {
+                font-size: clamp(0.9rem, 1.8vw, 1rem);
+            }
+        }
+        
+        /* Untuk desktop (1200px ke atas) */
+        @media (min-width: 1200px) {
+            .logo-text {
+                font-size: clamp(2.5rem, 4vw, 2.8rem);
             }
         }
 
+        /* Layout responsif lainnya */
         @media (min-width: 968px) {
             .main-content {
                 display: grid;
@@ -777,30 +802,25 @@
 
         @media (max-width: 768px) {
             .hero {
-                padding: 15px 0 15px; /* Sesuaikan padding untuk tablet */
-            }
-            
-            .logo-text {
-                font-size: 3rem;
+                padding: 15px 0 15px;
             }
             
             .logo-container {
-                margin-bottom: 15px; /* Sesuaikan untuk tablet */
+                margin-bottom: 12px;
             }
             
             .hero p {
-                font-size: 1rem;
                 margin-bottom: 20px;
-                margin-top: 15px; /* Sesuaikan untuk tablet */
+                margin-top: 12px;
             }
 
             .form-container {
-                padding: 25px 20px;
+                padding: 22px 18px;
             }
 
             .messages-section {
-                padding: 20px 18px;
-                max-height: 450px;
+                padding: 18px 16px;
+                max-height: 420px;
             }
 
             .mood-selector {
@@ -808,28 +828,18 @@
             }
 
             .mood-option {
-                font-size: 1.4rem;
-                padding: 8px;
+                font-size: 1.3rem;
+                padding: 7px;
             }
         }
 
         @media (max-width: 480px) {
             .hero {
-                padding: 10px 0 15px; /* Sesuaikan padding untuk mobile */
-            }
-            
-            .logo-text {
-                font-size: 2.5rem;
+                padding: 10px 0 15px;
             }
             
             .logo-container {
-                margin-bottom: 12px; /* Sesuaikan untuk mobile */
-            }
-            
-            .hero p {
-                font-size: 0.95rem;
-                margin-bottom: 20px;
-                margin-top: 12px; /* Sesuaikan untuk mobile */
+                margin-bottom: 10px;
             }
             
             .mood-selector {
@@ -842,7 +852,7 @@
             }
             
             .messages-section {
-                max-height: 400px;
+                max-height: 380px;
             }
             
             .form-container {
@@ -850,37 +860,7 @@
             }
             
             .messages-section {
-                padding: 18px 15px;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .hero {
-                padding: 8px 0 15px; /* Sesuaikan padding untuk mobile kecil */
-            }
-            
-            .logo-text {
-                font-size: 2rem;
-            }
-            
-            .logo-container {
-                margin-bottom: 10px; /* Sesuaikan untuk mobile kecil */
-            }
-            
-            .hero p {
-                font-size: 0.9rem;
-                margin-bottom: 20px;
-                margin-top: 10px; /* Sesuaikan untuk mobile kecil */
-            }
-            
-            .mood-selector {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 6px;
-            }
-
-            .mood-option {
-                font-size: 1.1rem;
-                padding: 5px;
+                padding: 16px 14px;
             }
         }
 
@@ -960,13 +940,13 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="phone">No. Telepon/WhatsApp</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Contoh: 08123456789">
+                            <label for="class">Kelas (opsional)</label>
+                            <input type="text" id="class" name="class" placeholder="Contoh: X RPL 1">
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Contoh: nama@email.com">
+                            <label for="phone">No. Telepon/WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Contoh: 08123456789">
                         </div>
                     </div>
                     
@@ -1010,7 +990,7 @@
                     <div class="empty-state">
                         <div class="icon">💫</div>
                         <p>Belum ada pesan</p>
-                        <p style="font-size: 0.8rem; margin-top: 6px;">Jadilah yang pertama meninggalkan pesan!</p>
+                        <p style="font-size: 0.75rem; margin-top: 6px;">Jadilah yang pertama meninggalkan pesan!</p>
                     </div>
                 </div>
             </section>
@@ -1219,11 +1199,14 @@
                 minute: '2-digit' 
             });
             
+            // Tambahkan kelas jika tersedia
+            const classInfo = messageData.class ? `, ${messageData.class}` : '';
+            
             messageCard.innerHTML = `
                 <div class="message-header">
                     <div class="message-info">
                         <div class="message-name">${messageData.name}</div>
-                        <div class="message-school">${messageData.school}</div>
+                        <div class="message-school">${messageData.school}${classInfo}</div>
                     </div>
                     <div class="message-mood">${messageData.mood}</div>
                 </div>
@@ -1271,8 +1254,8 @@
                 // Validasi form
                 const name = document.getElementById('name').value.trim();
                 const school = document.getElementById('school').value.trim();
+                const classInput = document.getElementById('class').value.trim();
                 const phone = document.getElementById('phone').value.trim();
-                const email = document.getElementById('email').value.trim();
                 const message = document.getElementById('message').value.trim();
                 const mood = document.getElementById('mood').value;
                 
@@ -1302,8 +1285,8 @@
                     const attendanceData = {
                         name,
                         school,
+                        class: classInput,
                         phone,
-                        email,
                         message,
                         mood
                     };
@@ -1320,6 +1303,7 @@
                         addMessageToFeed({
                             name,
                             school,
+                            class: classInput,
                             message,
                             mood: mood || "😊"
                         });
@@ -1358,36 +1342,42 @@
                 {
                     name: "Ahmad Rizki",
                     school: "SMK Negeri 1 Jakarta",
+                    class: "XII RPL 2",
                     message: "Pameran aplikasi dan game kali ini sangat menginspirasi! Saya belajar banyak tentang perkembangan teknologi terbaru dan dapat ide untuk project sekolah.",
                     mood: "🚀"
                 },
                 {
                     name: "Siti Nurhaliza",
                     school: "SMA Negeri 5 Bandung",
+                    class: "XI IPA 3",
                     message: "Keren banget! Aplikasi dan game yang ditampilkan sangat kreatif dan inovatif. Sukses selalu untuk RPL!",
                     mood: "✨"
                 },
                 {
                     name: "Budi Santoso",
                     school: "SMK Teknologi Indonesia",
+                    class: "",
                     message: "Senang bisa hadir di pameran ini. Banyak ide yang bisa saya terapkan untuk projek sekolah tahun depan.",
                     mood: "👍"
                 },
                 {
                     name: "Dewi Lestari",
                     school: "SMA Plus PGRI Cibinong",
+                    class: "XII IPS 1",
                     message: "UI/UX design yang ditampilkan sangat memukau. Terima kasih atas inspirasinya!",
                     mood: "❤️"
                 },
                 {
                     name: "Rizky Pratama",
                     school: "SMK TI Pembangunan",
+                    class: "",
                     message: "Inovasi yang ditampilkan sangat futuristik. Sangat menginspirasi untuk terus belajar teknologi.",
                     mood: "🌟"
                 },
                 {
                     name: "Maya Sari",
                     school: "SMA Negeri 8 Surabaya",
+                    class: "X MIPA 4",
                     message: "Presentasinya sangat menarik dan mudah dipahami. Good job untuk semua peserta!",
                     mood: "🎉"
                 }
@@ -1413,5 +1403,3 @@
     </script>
 </body>
 </html>
-
-
